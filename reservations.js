@@ -1,7 +1,7 @@
 
-$(".submit").on("click", function(event) {
+$("#resSubmit").on("click", function(event) {
     event.preventDefault();
-
+    alert("Yay! button works");
     var newReservation = {
       customerName: $("#nameInput").val().trim(),
       phoneNumber: $("#phoneInput").val().trim(),
@@ -11,8 +11,8 @@ $(".submit").on("click", function(event) {
 
     console.log(newReservation);
 
-    $.post("/api/tables", newReservation,
-      function(data) {
+    $.post("/api/tables", newReservation)
+      .then(function(data) {
 
         // If a table is available, tell user they are booked.
         if (data) {
