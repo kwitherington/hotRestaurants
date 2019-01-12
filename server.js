@@ -43,13 +43,13 @@ app.post("/api/tables", function(req, res) {
 
     if(reservation.length < 5 ){
 			reservation.push(newReservation);
-			res.json(true); // KEY LINE
+			res.json(true); 
 		}
 
 		// Or false if they don't have a table
 		else{
 			waitlist.push(newReservation);
-			res.json(false); // KEY LINE
+			res.json(false); 
 		}
 
 	});
