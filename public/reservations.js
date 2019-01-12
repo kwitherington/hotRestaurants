@@ -1,7 +1,6 @@
 
 $("#resSubmit").on("click", function(event) {
     event.preventDefault();
-    alert("Yay! button works");
     var newReservation = {
       customerName: $("#nameInput").val().trim(),
       phoneNumber: $("#phoneInput").val().trim(),
