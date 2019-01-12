@@ -1,5 +1,5 @@
 
-$(".submit").on("click", function(event) {
+$("#resSubmit").on("click", function(event) {
     event.preventDefault();
 
     var newReservation = {
