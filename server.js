@@ -33,6 +33,11 @@ app.get("/", function(req, res) {
     return res.json(reservation);
   });
 
+  app.get("/api/waitlist", function(req, res) {
+    return res.json(waitlist);
+  });
+
+  if(reservation.length < 5){
   // Create New Characters - takes in JSON input
 app.post("/api/tables", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
@@ -49,6 +54,23 @@ app.post("/api/tables", function(req, res) {
   
     res.json(newReservation);
   });
+} else {
+    app.post("/api/waitlist", function(req, res) {
+        // req.body hosts is equal to the JSON post sent from the user
+        // This works because of our body parsing middleware
+        var newWaitlist = req.body;
+      
+        // Using a RegEx Pattern to remove spaces from newCharacter
+        // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+        newWaitlist.routeName = newWaitlist.name;
+      
+        console.log(newWaitlist);
+      
+        waitlist.push(newWaitlist);
+      
+        res.json(newWaitlist);
+      });
+}
 
   
 
