@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Trains Schedule</title>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+  <!-- Moment -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Jumbotron Title -->
+    <div class="jumbotron bg-danger">
+      <h1 class="text-center display-4 text-light">Hot Restaurants</h1>
+      <h3 class="text-center lead text-light">Make your reservations</h3>
+      <br>
+      <div class="text-center">
+        <a href="/tables">
+          <button class="btn btn-lg btn-primary">
+            <span class="fa fa-list-alt"></span> View Tables</button>
+        </a>
+        <a href="/">
+          <button class="btn btn-lg btn-default">
+            <span class="fa fa-home"></span>
+          </button>
+        </a>
+      </div>
+    </div>
+    <br>
+
+    <!-- Add Reservation -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-danger">
+                <h3 class="text-light lead text-center">Table Reservation</h3>
+          </div>
+          <div class="card-body">
+            <form class="container">
+                <div class="form-group row">
+                    <label for="nameInput">Name</label>
+                    <input class="form-control" id="nameInput" type="text">
+                </div>
+                <div class="form-group row">
+                    <label for="phoneInput">Phone Number</label>
+                    <input class="form-control" id="phoneInput" type="text">
+                </div>
+                <div class="form-group row">
+                    <label for="emailInput">Email</label>
+                    <input class="form-control" id="emailInput" type="email">
+                </div>
+                <div class="form-group row">
+                    <label for="uniqueID">Unique ID</label>
+                    <input class="form-control" id="uniqueID" type="number">
+                </div>
+                <button class="btn btn-outline-primary btn-block" id="resSubmit" type="submit" style="width:100%">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../reservations.js"></script>
+
+</body>
+
+</html>
